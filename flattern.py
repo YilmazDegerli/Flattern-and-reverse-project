@@ -6,12 +6,12 @@ output: [1,'a','cat',2,3,'dog',4,5]
 
 l = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
 new_l = []
-def flatten(x):
+def flattern(x):
     for i in x :
         if isinstance(i,list):
-            flatten(i)
+            flattern(i)
         else:
             new_l.append(i)
 
-flatten(l)
+flattern(l)
 print(new_l)
